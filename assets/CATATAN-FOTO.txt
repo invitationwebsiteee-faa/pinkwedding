@@ -1,0 +1,9 @@
+Elemen desain sudah lengkap di folder ini.
+Tinggal tambahkan foto dengan nama persis seperti di bawah:
+
+foto-polaroid-1.jpg, foto-polaroid-2.jpg  -> 2 foto di polaroid
+foto-utama.jpg                            -> foto di bingkai oval
+foto-vinyl.jpg                            -> foto kecil di tengah piringan hitam
+kisah-1.jpg s/d kisah-4.jpg               -> foto Kisah Kami
+galeri-1.jpg s/d galeri-6.jpg             -> foto Galeri
+musik.mp3                                 -> lagu latar

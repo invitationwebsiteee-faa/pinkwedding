@@ -1,0 +1,18 @@
+Taruh semua elemen di folder ini dengan nama persis seperti di bawah.
+Kalau ada yang belum ada, website tetap jalan.
+
+KOLASE
+strip-1.jpg, strip-2.jpg, strip-3.jpg  -> 3 foto photobooth
+foto-utama.jpg                         -> foto di bingkai oval
+bingkai-oval.png                       -> bingkai renda (opsional, PNG transparan)
+foto-vinyl.jpg                         -> foto di tengah piringan hitam
+cermin.png                             -> cermin perak di belakang (opsional)
+kartu-std.png                          -> kertas emboss kartu Save the Date (opsional)
+buket.png                              -> buket bunga (PNG transparan)
+renda-kiri.png, renda-kanan.png        -> bunga emboss pinggir layar
+
+HALAMAN DETAIL
+kisah-1.jpg s/d kisah-4.jpg            -> foto Kisah Kami
+foto-gedung.jpg                        -> foto tempat acara
+galeri-1.jpg s/d galeri-6.jpg          -> foto galeri
+musik.mp3                              -> lagu latar

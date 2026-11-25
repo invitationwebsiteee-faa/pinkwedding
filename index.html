@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wedding of Rara & Dimas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="layar">
+
+  <!-- =====================================================
+       TAHAP 1: AMPLOP
+       ===================================================== -->
+  <section id="tahapAmplop" class="tahap aktif">
+    <p class="kapital salam">The Wedding of</p>
+    <p class="nama-script salam-nama">Rara &amp; Dimas</p>
+
+    <div class="amplop" id="amplop">
+      <!-- bagian dalam amplop (dari gambar amplop terbuka) -->
+      <img class="amp-dalam" src="assets/amplop-terbuka.png" alt="">
+      <img class="amp-tutup-atas" src="assets/amplop-terbuka.png" alt="">
+
+      <!-- kertas surat -->
+      <div class="amp-surat">
+        <p class="kapital kecil">Kepada Yth.</p>
+        <p class="nama-tamu" id="namaTamu">Bapak/Ibu/Saudara/i</p>
+        <p class="kecil">Tanpa mengurangi rasa hormat, kami mengundang Anda di hari bahagia kami</p>
+      </div>
+
+      <!-- kantong depan amplop -->
+      <img class="amp-kantong" src="assets/amplop-terbuka.png" alt="">
+
+      <!-- amplop tertutup (tampil sebelum dibuka) -->
+      <img class="amp-tertutup" src="assets/amplop-tertutup.png" alt="">
+
+      <button class="segel" id="segel" aria-label="Buka undangan">
+        <img src="assets/segel.png" alt="">
+      </button>
+
+      <img class="hias amp-lili" src="assets/lili.png" alt="">
+      <img class="hias amp-kupu" id="kupuAmplop" src="assets/kupu.png" alt="">
+    </div>
+
+    <img class="hias amp-peri" src="assets/peri.png" alt="">
+    <p class="petunjuk">Ketuk segel untuk membuka</p>
+  </section>
+
+  <!-- =====================================================
+       TAHAP 2: HALAMAN UTAMA (KOLASE)
+       ===================================================== -->
+  <section id="tahapUtama" class="tahap">
+    <div class="isi-utama">
+      <p class="kapital judul-atas muncul-urut">Please Join Us</p>
+
+      <div class="kolase">
+
+        <!-- polaroid: buka Kisah Kami -->
+        <button class="item polaroid keluar-amplop" data-buka="kisah" aria-label="Kisah kami">
+          <span class="lubang lubang-p1"><span class="foto" style="--foto:url(assets/foto-polaroid-1.jpg)"></span></span>
+          <span class="lubang lubang-p2"><span class="foto" style="--foto:url(assets/foto-polaroid-2.jpg)"></span></span>
+          <img src="assets/polaroid-duo.png" alt="">
+        </button>
+
+        <!-- kartu save the date: buka Detail Acara -->
+        <button class="item kartu-std keluar-amplop" data-buka="acara" aria-label="Detail acara">
+          <img class="emboss emboss-1" src="assets/lili.png" alt="">
+          <img class="emboss emboss-2" src="assets/lili.png" alt="">
+          <span class="monogram">R&amp;D</span>
+          <span class="kapital std">Save the Date</span>
+          <span class="nama-script nama-kartu">Rara Ayu</span>
+          <span class="nama-script nama-kartu">Dimas Pratama</span>
+        </button>
+
+        <!-- bingkai oval: buka Galeri -->
+        <button class="item oval keluar-amplop" data-buka="galeri" aria-label="Galeri">
+          <span class="lubang lubang-oval"><span class="foto" style="--foto:url(assets/foto-utama.jpg)"></span></span>
+          <img src="assets/bingkai-oval.png" alt="">
+        </button>
+        <img class="hias lili-oval keluar-amplop" src="assets/lili.png" alt="">
+
+        <!-- piringan hitam: putar musik -->
+        <button class="item vinyl keluar-amplop" id="vinyl" aria-label="Putar musik">
+          <span class="foto" style="--foto:url(assets/foto-vinyl.jpg)"></span>
+          <span class="ikon-play"></span>
+        </button>
+
+        <!-- bingkai hati berisi tanggal: buka Hitung Mundur -->
+        <button class="item hati keluar-amplop" data-buka="hitung" aria-label="Hitung mundur">
+          <span class="lubang lubang-hati"><span class="isi-hati"></span></span>
+          <img src="assets/bingkai-hati.png" alt="">
+          <span class="tanggal-hati">14.02.27</span>
+        </button>
+
+        <!-- buket bunga menjuntai -->
+        <img class="hias cascade keluar-amplop" src="assets/buket-cascade.png" alt="">
+      </div>
+
+      <p class="kapital hari-utama muncul-urut">Sabtu, 14 Februari</p>
+      <h2 class="nama-script tempat-utama muncul-urut">Gedung Serbaguna</h2>
+      <p class="kapital alamat muncul-urut">Jl. Melati No. 5, Kepanjen Kidul,<br>Kota Blitar, Jawa Timur</p>
+      <p class="kapital jam-utama muncul-urut">Pukul sebelas pagi</p>
+
+      <div class="tombol-bawah muncul-urut">
+        <button class="label-tombol label-renda-1" data-buka="rsvp"><span>RSVP</span></button>
+        <button class="label-tombol label-bunga-1" data-buka="kado"><span>Kirim Kado</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       HALAMAN DETAIL (muncul dari bawah saat diklik)
+       ===================================================== -->
+
+  <!-- Kisah Kami -->
+  <div class="lembar" id="kisah">
+    <button class="kembali" data-tutup>&#8592; Kembali</button>
+    <p class="kapital kecil">Our Love Story</p>
+    <h3 class="nama-script judul-lembar">Kisah Kami</h3>
+
+    <div class="tumpukan-polaroid" id="tumpukan"></div>
+    <p class="petunjuk">Ketuk foto untuk cerita selanjutnya</p>
+
+    <div class="cerita" id="cerita">
+      <p class="kapital kecil" id="ceritaTanggal"></p>
+      <h4 id="ceritaJudul"></h4>
+      <p id="ceritaIsi"></p>
+    </div>
+    <div class="titik-cerita" id="titikCerita"></div>
+  </div>
+
+  <!-- Detail Acara -->
+  <div class="lembar" id="acara">
+    <button class="kembali" data-tutup>&#8592; Kembali</button>
+    <p class="kapital kecil">The Finer Details</p>
+    <h3 class="nama-script judul-lembar">Detail Acara</h3>
+
+    <div class="kartu-isi">
+      <h4 class="nama-script">Akad Nikah</h4>
+      <p class="kapital">Sabtu, 14 Februari 2027</p>
+      <p>08.00 - 10.00 WIB</p>
+      <p class="kecil">Masjid Al-Ikhlas<br>Jl. Mawar No. 10, Blitar</p>
+      <a class="tombol tombol-garis" href="https://maps.google.com/?q=Masjid+Al-Ikhlas+Blitar" target="_blank">Lihat Lokasi</a>
+    </div>
+
+    <div class="kartu-isi">
+      <h4 class="nama-script">Resepsi</h4>
+      <p class="kapital">Sabtu, 14 Februari 2027</p>
+      <p>11.00 - 14.00 WIB</p>
+      <p class="kecil">Gedung Serbaguna<br>Jl. Melati No. 5, Blitar</p>
+      <a class="tombol tombol-garis" href="https://maps.google.com/?q=Gedung+Serbaguna+Blitar" target="_blank">Lihat Lokasi</a>
+    </div>
+
+    <div class="kartu-isi">
+      <h4 class="nama-script">Susunan Acara</h4>
+      <ul class="linimasa">
+        <li><b>08.00</b> Akad nikah</li>
+        <li><b>10.00</b> Sesi foto keluarga</li>
+        <li><b>11.00</b> Kedatangan tamu</li>
+        <li><b>11.30</b> Kirab pengantin</li>
+        <li><b>12.00</b> Ramah tamah</li>
+        <li><b>14.00</b> Penutup</li>
+      </ul>
+    </div>
+
+    <div class="kartu-isi">
+      <h4 class="nama-script">Dress Code</h4>
+      <p>Nuansa pink pastel, putih, atau krem</p>
+      <div class="palet"><span style="background:#f7d6dc"></span><span style="background:#e9aebb"></span><span style="background:#fffaf6"></span><span style="background:#e8dcc8"></span></div>
+    </div>
+  </div>
+
+  <!-- Hitung Mundur -->
+  <div class="lembar lembar-kecil" id="hitung">
+    <button class="kembali" data-tutup>&#8592; Kembali</button>
+    <h3 class="nama-script judul-lembar">Menuju Hari Bahagia</h3>
+    <div class="hitung-mundur">
+      <div><span id="hari">0</span><small>Hari</small></div>
+      <div><span id="jam">0</span><small>Jam</small></div>
+      <div><span id="menit">0</span><small>Menit</small></div>
+      <div><span id="detik">0</span><small>Detik</small></div>
+    </div>
+    <a class="tombol" id="simpanKalender" target="_blank">Simpan ke Kalender</a>
+  </div>
+
+  <!-- Galeri -->
+  <div class="lembar" id="galeri">
+    <button class="kembali" data-tutup>&#8592; Kembali</button>
+    <p class="kapital kecil">Our Moments</p>
+    <h3 class="nama-script judul-lembar">Galeri</h3>
+    <div class="grid-galeri" id="gridGaleri"></div>
+  </div>
+
+  <!-- RSVP -->
+  <div class="lembar" id="rsvp">
+    <button class="kembali" data-tutup>&#8592; Kembali</button>
+    <p class="kapital kecil">Konfirmasi Kehadiran</p>
+    <h3 class="nama-script judul-lembar">RSVP</h3>
+    <p class="kecil">Kami sangat menantikan kehadiranmu. Isi form di bawah ini ya.</p>
+
+    <form id="formRsvp" class="kartu-isi">
+      <label>Nama</label>
+      <input type="text" id="rsvpNama" required>
+
+      <label>Apakah kamu akan hadir?</label>
+      <div class="pilihan">
+        <input type="radio" name="hadir" id="hadirYa" value="Hadir" required><label for="hadirYa">Dengan senang hati hadir</label>
+        <input type="radio" name="hadir" id="hadirTidak" value="Tidak Hadir"><label for="hadirTidak">Mohon maaf, tidak bisa hadir</label>
+      </div>
+
+      <label>Jumlah tamu (termasuk kamu)</label>
+      <div class="pilihan pilihan-baris">
+        <input type="radio" name="jumlah" id="j1" value="1" checked><label for="j1">1</label>
+        <input type="radio" name="jumlah" id="j2" value="2"><label for="j2">2</label>
+        <input type="radio" name="jumlah" id="j3" value="3"><label for="j3">3</label>
+      </div>
+
+      <label>Ucapan &amp; doa</label>
+      <textarea id="rsvpUcapan" rows="3" required></textarea>
+
+      <button type="submit" class="tombol">Kirim RSVP</button>
+    </form>
+
+    <div id="daftarUcapan" class="daftar-ucapan"></div>
+  </div>
+
+  <!-- Kado -->
+  <div class="lembar" id="kado">
+    <button class="kembali" data-tutup>&#8592; Kembali</button>
+    <p class="kapital kecil">Wedding Gift</p>
+    <h3 class="nama-script judul-lembar">Kirim Kado</h3>
+    <img class="buket-kado" src="assets/buket-mawar.png" alt="">
+    <p class="kecil">Doa restu sudah lebih dari cukup. Jika ingin memberi tanda kasih, bisa melalui:</p>
+    <div class="kartu-isi">
+      <p class="kapital">BCA</p>
+      <p class="norek">1234567890</p>
+      <p class="kecil">a.n. Rara Ayu Lestari</p>
+      <button class="tombol tombol-garis salin" data-salin="1234567890">Salin Nomor</button>
+    </div>
+    <div class="kartu-isi">
+      <p class="kapital">DANA</p>
+      <p class="norek">081234567890</p>
+      <p class="kecil">a.n. Dimas Pratama</p>
+      <button class="tombol tombol-garis salin" data-salin="081234567890">Salin Nomor</button>
+    </div>
+  </div>
+
+  <!-- Pop-up foto besar -->
+  <div class="popup" id="popupFoto">
+    <button class="tutup-x" data-tutup>&times;</button>
+    <img id="fotoBesar" src="" alt="Foto">
+  </div>
+
+  <!-- Pop-up terima kasih -->
+  <div class="popup" id="popupTerimaKasih">
+    <div class="kotak-popup">
+      <p class="nama-script judul-lembar">Terima Kasih</p>
+      <p id="pesanTerimaKasih"></p>
+      <button class="tombol" data-tutup>Tutup</button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <audio id="musik" src="assets/musik.mp3" loop></audio>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
